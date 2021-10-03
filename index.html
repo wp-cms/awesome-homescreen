@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awesome Homescreen</title>
+    <link rel="icon" type="image/png" href="./favicon.png">
+
+    <!-- Include amazing Vanilla CSS super styling powers -->
+    <link rel="stylesheet" href="./vanilla-css.css">
+</head>
+<body>
+
+    <!-- The super toolbar -->
+    <div class="toolbar">
+        <input type="text" class="search-box" autofocus id="search-text" placeholder="Search" autocomplete="off">
+        <div class="buttons">
+            <button id="import-button">Import</button>
+            <button id="export-button">Export</button>
+        </div>
+    </div>
+
+    <!-- Import/Export data box -->
+    <textarea id="json-data"></textarea>
+
+    <!-- The main fancy stuff -->
+    <main class="app-body">
+
+        <!-- Bookmarks column -->
+        <div class="bookmarks">
+            <form id="add-bookmark-form">
+                <input type="text" required placeholder="Title" class="no-bottom-border" id="add-bookmark-title" autocomplete="off"><br>
+                <input type="url" required placeholder="URL" id="add-bookmark-url" autocomplete="off">
+                <button type="submit">+</button>
+            </form>
+            <div class="items" id="bookmarks-container"></div>
+        </div>
+
+        <!-- Notes column -->
+        <div id="notes">
+            <form id="add-note-form">
+                <textarea required id="add-note-content" placeholder="Add note..."></textarea>
+                <button type="submit">+</button>
+            </form>
+            <div class="items" id="notes-container"></div>
+        </div>
+
+        <!-- Tasks column -->
+        <div class="tasks">
+            <form id="add-task-form">
+                <textarea required id="add-task-description" placeholder="Add task..."></textarea>
+                <button type="submit">+</button>
+            </form>
+            <div class="items" id="tasks-container"></div>
+        </div>
+
+    </main>
+
+
+    <!-- Include amazing Vanilla JS super logic powers -->
+    <script src="./vanilla-javascript.js"></script>
+
+</body>
+</html>
